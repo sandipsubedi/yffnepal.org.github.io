@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth for Future Nepal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      background: #f7fafc;
+      color: #222;
+    }
+    header {
+      background: #e63946;
+      color: #fff;
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+    }
+    nav {
+      margin: 1rem 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ffd166;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      color: #fff;
+      padding: 5rem 2rem 6rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(230,57,70,0.6);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      animation: fadeIn 1s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #f1faee;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(34,34,59,0.08);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 1.2s;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(230,57,70,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.2rem;
+      flex: 1;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #e63946;
+      margin-bottom: 0.5rem;
+    }
+    .card-desc {
+      font-size: 1rem;
+      color: #22223b;
+    }
+    h2 {
+      color: #e63946;
+      margin-top: 0;
+    }
+    .president {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .president img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #e63946;
+    }
+    footer {
+      background: #22223b;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      section { padding: 1rem; }
+      .president { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-size:2rem;font-weight:700;letter-spacing:2px;">Youth for Future Nepal</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Empowering Youth, Shaping Nepal's Future</h1>
+      <p>We are a non-profit organization dedicated to inspiring, educating, and empowering the youth of Nepal for a brighter tomorrow.</p>
+    </div>
+  </div>
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <div class="president">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="President Dipendra Claulaigai">
+        <div>
+          <strong>President: Dipendra Claulaigai</strong><br>
+          <span>Message: "Together, we can build a future where every young Nepali has the opportunity to thrive and lead."</span>
+        </div>
+      </div>
+      <p>Youth for Future Nepal (YFF Nepal) is committed to fostering leadership, education, and social responsibility among the youth of Nepal. We believe in the power of young minds to create positive change in their communities and beyond.</p>
+    </section>
+    <section id="projects">
+      <h2>Our Projects</h2>
+      <div class="gallery">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Youth Leadership Workshop">
+          <div class="card-content">
+            <div class="card-title">Youth Leadership Workshops</div>
+            <div class="card-desc">Training the next generation of leaders through interactive workshops and mentorship programs.</div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80" alt="Community Clean-Up Drive">
+          <div class="card-content">
+            <div class="card-title">Community Clean-Up Drives</div>
+            <div class="card-desc">Promoting environmental awareness and action by organizing clean-up events in local communities.</div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Education for All">
+          <div class="card-content">
+            <div class="card-title">Education for All</div>
+            <div class="card-desc">Supporting underprivileged children with access to quality education and school supplies.</div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Health & Wellness Camp">
+          <div class="card-content">
+            <div class="card-title">Health & Wellness Camps</div>
+            <div class="card-desc">Focusing on physical and mental well-being of youth through health camps and awareness sessions.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:info@yffnepal.org">info@yffnepal.org</a></p>
+      <p>Location: Kathmandu, Nepal</p>
+      <p>Follow us on <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Youth for Future Nepal. All rights reserved.
+  </footer>
+</body>
+</html> 
